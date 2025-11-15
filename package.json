@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "vercel-build": "playwright install chromium && next build"
+    "lint": "eslint"
   },
   "dependencies": {
     "@codesandbox/sandpack-react": "^2.20.0",
