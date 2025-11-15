@@ -1,6 +1,5 @@
 import {
-  getMediumArticleAuthorAvatar,
-  getMediumArticleCached,
+  getMediumArticleCached
 } from "@/app/actions";
 import {Bookmark, MessageCircle, Minus} from "lucide-react";
 import Image from "next/image";
@@ -20,11 +19,10 @@ export async function Embed() {
     commentsCount,
     firstLine,
     heroImage,
+    authorAvatar
   } = await getMediumArticleCached(url);
 
-  const {authorAvatar} = await getMediumArticleAuthorAvatar(url);
-
-  if (!heroImage) {
+  if (!heroImage || !authorAvatar) {
     return <div>No hero image found for this article.</div>;
   }
   return (

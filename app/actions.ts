@@ -1,5 +1,5 @@
 "use server";
-import { getArticleInfo, getAuthorAvatar } from "medium-info-api";
+import { getArticleInfo } from "medium-info-api";
 import { cacheLife } from "next/cache";
 
 export const getMediumArticleCached = (async (url: string) => {
@@ -16,16 +16,6 @@ export const getMediumArticleCached = (async (url: string) => {
     commentsCount: info.commentsCount,
     firstLine: info.firstLine,
     heroImage: info.heroImage,
-  };
-});
-
-export const getMediumArticleAuthorAvatar = (async (url: string) => {
-  "use cache";
-  cacheLife("days");
-
-  const info = await getAuthorAvatar(url);
-
-  return {
-   authorAvatar : info.authorAvatar
+    authorAvatar : info.authorAvatar
   };
 });
