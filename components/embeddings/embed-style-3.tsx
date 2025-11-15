@@ -46,7 +46,7 @@ export async function Embed3() {
           />
 
           {/* Gradient Title Bar */}
-          <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t hidden hover-inline from-black/70 to-transparent">
+          <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/70 to-transparent">
             <h2 className="text-white text-base font-medium">{title}</h2>
           </div>
         </div>
