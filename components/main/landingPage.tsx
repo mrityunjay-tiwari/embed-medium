@@ -11,27 +11,51 @@ export default function LandingPage() {
   return (
     <>
       <BGGradient>
-        <div className="pt-10">
+        <div className="pt-10 px-4 md:px-8 max-w-4xl mx-auto">
           <h1 className="md:text-4xl text-2xl font-bold capitalize text-gray-900">
             WELCOME TO MEDIUM EMBED UI LIBRARY !
           </h1>
-          <div>
+          <p className="text-base mt-0.5 text-gray-700">
             This is a collection of components to help you embed Medium posts
             easily into your NextJS applications.
-          </div>
+          </p>
           <div>
             <h1 className="md:text-2xl text-xl font-semibold mt-10">
               Installation
             </h1>
           </div>
           <div className="mt-5">
-            {`During installation of Next.js ensure you have Next.js version 16 or above as here "use cache" is used further`}
+            <p className="text-sm md:text-base text-gray-700 mb-0.5">
+              {`During installation of Next.js ensure you have Next.js version 16 or above as here "use cache" is used further`}
+            </p>
             <CodeblockNext />
           </div>
           <div className="mt-10">
-            {`It let's you fetch all the information about the article to let you then use them to design the embedding card.`}
+            <p className="text-sm md:text-base text-gray-700 mb-0.5">
+              {`It let's you fetch all the information about the article to let you then use them to design the embedding card.`}
+            </p>
             <Codeblock />
-            <h1 className="flex font-thin text-xs mt-1 ml-1">{`To study more about this package, visit :  `} <Link href={'https://www.npmjs.com/package/medium-info-api'} target="_blank" className="mx-1"> {`NPM Respository↗`} </Link> <Link href={'https://medium.com/@mrityunjaytiwari1873/how-to-scrape-medium-efficiently-9c18b097a58f'} target="_blank"> Medium Article↗ </Link></h1>
+            <h1 className="text-xs mt-1 ml-1 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-1 text-gray-800">
+              <span>To study more about this package, visit:</span>
+
+              <div className="flex gap-1">
+                <Link
+                  href="https://www.npmjs.com/package/medium-info-api"
+                  target="_blank"
+                  className="underline"
+                >
+                  NPM Repository ↗,
+                </Link>
+
+                <Link
+                  href="https://medium.com/@mrityunjaytiwari1873/how-to-scrape-medium-efficiently-9c18b097a58f"
+                  target="_blank"
+                  className="underline"
+                >
+                  Medium Article ↗
+                </Link>
+              </div>
+            </h1>
           </div>
           <div>
             <h1 className="md:text-2xl text-xl font-semibold mt-10">
@@ -39,28 +63,25 @@ export default function LandingPage() {
             </h1>
           </div>
           <div className="mt-5 mb-10">
-            <div id="sample1">
-              <h1 className="text-lg md:text-xl font-medium mb-4">
+            <section id="sample1" className="mb-8">
+              <h1 className="text-lg md:text-xl font-medium mb-3">
                 Embed Style 1
               </h1>
               <Example />
-            </div>
-            <div id="sample2">
-              <h1 className="text-lg md:text-xl font-medium mb-4 mt-6">
+            </section>
+            <section id="sample2" className="mb-8">
+              <h1 className="text-lg md:text-xl font-medium mb-3">
                 Embed Style 2
               </h1>
               <Example2 />
-            </div>
-            <div id="sample3">
-              <h1 className="text-lg md:text-xl font-medium mb-4 mt-6">
+            </section>
+            <section id="sample3">
+              <h1 className="text-lg md:text-xl font-medium mb-3">
                 Embed Style 3
               </h1>
               <Example3 />
-            </div>
+            </section>
           </div>
-          {/* <div className="mb-20">
-        <PaginatedView />
-      </div> */}
           <Footer />
         </div>
       </BGGradient>
