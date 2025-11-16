@@ -283,7 +283,7 @@ const Example = () => (
             </ResizablePanel>
 
             {/* Handle only visible on desktop */}
-            <div className="hidden md:block">
+            <div className="block">
               <ResizableHandle withHandle />
             </div>
 

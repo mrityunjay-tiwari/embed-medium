@@ -157,7 +157,7 @@ const Example2 = () => (
             >
               <SandboxFileExplorer />
             </ResizablePanel>
-            <div className="hidden md:block">
+            <div className="block">
 
             <ResizableHandle withHandle />
             </div>
