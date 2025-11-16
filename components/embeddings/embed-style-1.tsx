@@ -270,7 +270,7 @@ const Example = () => (
         >
           {/* Mobile: vertical stack  | Desktop: horizontal panels */}
           <ResizablePanelGroup
-            direction="vertical"
+            direction="horizontal"
             className="md:!flex md:!flex-row"
           >
             <ResizablePanel

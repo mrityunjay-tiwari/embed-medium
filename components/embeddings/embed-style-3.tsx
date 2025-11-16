@@ -145,7 +145,7 @@ const Example3 = () => (
           </SandboxTabsTrigger>
         </SandboxTabsList>
         <SandboxTabsContent className="overflow-hidden p-3 md:p-6 w-full" value="code">
-          <ResizablePanelGroup direction="vertical" className="md:flex! md:flex-row!">
+          <ResizablePanelGroup direction="horizontal" className="md:flex! md:flex-row!">
             <ResizablePanel
               className="overflow-y-auto"
               defaultSize={25}
