@@ -76,7 +76,7 @@ export async function Embed() {
             alt="Article Thumbnail"
             width={0}
             height={0}
-            sizes="100vw"
+            sizes="90vw"
             className="rounded w-full h-auto"
           />
         </div>
