@@ -168,7 +168,7 @@ const Example3 = () => (
             value="preview"
             className="p-4 py-10 md:p-6 md:py-20 flex justify-center items-center bg-muted overflow-x-hidden"
           >
-            {/* <Embed3 /> */}
+            <Embed3 />
           </SandboxTabsContent>
         </Suspense>
       </SandboxTabs>
