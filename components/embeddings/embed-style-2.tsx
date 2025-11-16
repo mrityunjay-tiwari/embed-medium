@@ -152,7 +152,7 @@ const Example2 = () => (
             <ResizablePanel
               className="overflow-y-auto overflow-x-auto md:overflow-x-hidden"
               defaultSize={25}
-              maxSize={40}
+              maxSize={70}
               minSize={20}
             >
               <SandboxFileExplorer />
