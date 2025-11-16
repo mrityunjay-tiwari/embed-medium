@@ -297,7 +297,7 @@ const Example = () => (
         <Suspense fallback={<div>Loading embed...</div>}>
           <SandboxTabsContent
             value="preview"
-            className="p-4 py-10 md:p-6 md:py-20 flex justify-center items-center bg-muted overflow-auto"
+            className="p-4 py-10 md:p-6 md:py-20 items-center bg-muted overflow-auto w-full"
           >
             <Embed />
           </SandboxTabsContent>
