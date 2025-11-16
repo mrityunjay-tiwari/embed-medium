@@ -27,7 +27,7 @@ export async function Embed() {
   }
   return (
     <Link href={url} target="_blank">
-      <div className="max-w-3xl border-b border-gray-200 p-4 flex justify-between items-start rounded-sm bg-white">
+      <div className="max-w-xl md:max-w-3xl border-b border-gray-200 p-4 flex justify-between items-start rounded-sm bg-white">
         
         <div className="flex flex-col gap-2">
          
@@ -42,9 +42,9 @@ export async function Embed() {
             <span className="font-medium">{authorName}</span>
           </div>
 
-          <h2 className="text-2xl font-bold leading-snug pt-2">{title}</h2>
+          <h2 className="text-lg md:text-2xl font-bold leading-snug pt-2">{title}</h2>
 
-          <p className="text-gray-600 text-base line-clamp-2 pr-4">
+          <p className="text-gray-600 text-sm md:text-base line-clamp-2 pr-4">
             {firstLine}
           </p>
 
@@ -53,11 +53,11 @@ export async function Embed() {
               <span className="text-yellow-500 text-xl">
                 <PiStarFourFill />
               </span>
-              <span>{publishedDate}</span>
-              <span className="flex items-center gap-1">
+              <span className="text-xs md:text-base">{publishedDate}</span>
+              <span className="flex items-center gap-1 text-xs md:text-base">
                 <PiHandsClappingFill size={16} /> {clapCount}
               </span>
-              <span className="flex items-center gap-1">
+              <span className="flex items-center text-xs md:text-base gap-1">
                 <MessageCircle size={16} /> {commentsCount}
               </span>
             </div>
@@ -70,13 +70,14 @@ export async function Embed() {
         </div>
 
       
-        <div className=" my-8 mr-8 pl-8 shrink-0 border-l-2">
+        <div className="my-4 pl-4 border-l-2 sm:my-8 sm:mr-8 sm:pl-8 sm:border-l-2">
           <Image
             src={heroImage} 
             alt="Article Thumbnail"
-            width={200}
-            height={150}
-            className="rounded object-cover"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="rounded w-full h-auto"
           />
         </div>
       </div>
