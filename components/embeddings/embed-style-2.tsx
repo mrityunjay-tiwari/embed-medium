@@ -150,7 +150,7 @@ const Example2 = () => (
           <ResizablePanelGroup direction="horizontal"
             className="md:!flex md:!flex-row">
             <ResizablePanel
-              className="overflow-y-auto"
+              className="overflow-y-auto overflow-x-auto md:overflow-x-hidden"
               defaultSize={25}
               maxSize={40}
               minSize={20}

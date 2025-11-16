@@ -274,7 +274,7 @@ const Example = () => (
             className="md:!flex md:!flex-row"
           >
             <ResizablePanel
-              className="overflow-y-auto"
+              className="overflow-y-auto overflow-x-auto md:overflow-x-hidden"
               defaultSize={30}
               maxSize={40}
               minSize={20}
