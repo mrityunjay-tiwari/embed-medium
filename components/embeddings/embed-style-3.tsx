@@ -130,11 +130,11 @@ const Example3 = () => (
       activeFile: "/app/page.tsx", 
     }}
     files={files}
-    className="overflow-auto"
+    className="w-full max-w-full overflow-x-hidden"
   >
-    <SandboxLayout>
+    <SandboxLayout className="w-full max-w-full">
       <SandboxTabs defaultValue="preview">
-        <SandboxTabsList>
+        <SandboxTabsList className="w-full flex justify-center md:justify-start">
           <SandboxTabsTrigger value="code">
             <CodeIcon size={14} />
             Coding
@@ -144,8 +144,8 @@ const Example3 = () => (
             Preview
           </SandboxTabsTrigger>
         </SandboxTabsList>
-        <SandboxTabsContent className="overflow-hidden p-6" value="code">
-          <ResizablePanelGroup direction="horizontal">
+        <SandboxTabsContent className="overflow-hidden p-3 md:p-6 w-full" value="code">
+          <ResizablePanelGroup direction="vertical" className="md:!flex md:!flex-row">
             <ResizablePanel
               className="overflow-y-auto"
               defaultSize={25}
@@ -154,7 +154,10 @@ const Example3 = () => (
             >
               <SandboxFileExplorer />
             </ResizablePanel>
+            <div className="hidden md:block">
+
             <ResizableHandle withHandle />
+            </div>
             <ResizablePanel className="overflow-y-auto">
               <SandboxCodeEditor />
             </ResizablePanel>
@@ -163,9 +166,9 @@ const Example3 = () => (
         <Suspense fallback={<div>Loading embed...</div>}>
           <SandboxTabsContent
             value="preview"
-            className="p-6 py-20 flex justify-center items-center bg-muted"
+            className="p-4 py-10 md:p-6 md:py-20 flex justify-center items-center bg-muted overflow-x-hidden"
           >
-            <Embed3 />
+            {/* <Embed3 /> */}
           </SandboxTabsContent>
         </Suspense>
       </SandboxTabs>

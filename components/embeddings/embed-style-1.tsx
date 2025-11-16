@@ -177,6 +177,62 @@ import Example from "./components/embeddings/mainembed";`,
   },
 };
 
+// const Example = () => (
+//   <SandboxProvider
+//     template="react"
+//     options={{
+//       visibleFiles: [
+//         "/app/embed.tsx",
+//         "/components/medium-embedding.tsx",
+//         "/app/actions.ts",
+//         "/app/page.tsx",
+//         "/next.config.json",
+//       ],
+//       activeFile: "/app/page.tsx", 
+//     }}
+//     files={files}
+//     className="overflow-auto"
+//   >
+//     <SandboxLayout>
+//       <SandboxTabs defaultValue="preview">
+//         <SandboxTabsList>
+//           <SandboxTabsTrigger value="code">
+//             <CodeIcon size={14} />
+//             Code
+//           </SandboxTabsTrigger>
+//           <SandboxTabsTrigger value="preview">
+//             <AppWindowIcon size={14} />
+//             Preview
+//           </SandboxTabsTrigger>
+//         </SandboxTabsList>
+//         <SandboxTabsContent className="overflow-hidden p-6" value="code">
+//           <ResizablePanelGroup direction="horizontal">
+//             <ResizablePanel
+//               className="overflow-y-auto"
+//               defaultSize={25}
+//               maxSize={40}
+//               minSize={20}
+//             >
+//               <SandboxFileExplorer />
+//             </ResizablePanel>
+//             <ResizableHandle withHandle />
+//             <ResizablePanel className="overflow-y-auto">
+//               <SandboxCodeEditor />
+//             </ResizablePanel>
+//           </ResizablePanelGroup>
+//         </SandboxTabsContent>
+//         <Suspense fallback={<div>Loading embed...</div>}>
+//           <SandboxTabsContent
+//             value="preview"
+//             className="p-6 py-20 flex justify-center items-center bg-muted"
+//           >
+//             <Embed />
+//           </SandboxTabsContent>
+//         </Suspense>
+//       </SandboxTabs>
+//     </SandboxLayout>
+//   </SandboxProvider>
+// );
 const Example = () => (
   <SandboxProvider
     template="react"
@@ -188,49 +244,67 @@ const Example = () => (
         "/app/page.tsx",
         "/next.config.json",
       ],
-      activeFile: "/app/page.tsx", 
+      activeFile: "/app/page.tsx",
     }}
     files={files}
-    className="overflow-auto"
+    className="w-full max-w-full overflow-x-hidden"
   >
-    <SandboxLayout>
+    <SandboxLayout className="w-full max-w-full">
       <SandboxTabs defaultValue="preview">
-        <SandboxTabsList>
+        <SandboxTabsList className="w-full flex justify-center md:justify-start">
           <SandboxTabsTrigger value="code">
             <CodeIcon size={14} />
             Code
           </SandboxTabsTrigger>
+
           <SandboxTabsTrigger value="preview">
             <AppWindowIcon size={14} />
             Preview
           </SandboxTabsTrigger>
         </SandboxTabsList>
-        <SandboxTabsContent className="overflow-hidden p-6" value="code">
-          <ResizablePanelGroup direction="horizontal">
+
+        {/* CODE TAB */}
+        <SandboxTabsContent
+          className="overflow-hidden p-3 md:p-6 w-full"
+          value="code"
+        >
+          {/* Mobile: vertical stack  | Desktop: horizontal panels */}
+          <ResizablePanelGroup
+            direction="vertical"
+            className="md:!flex md:!flex-row"
+          >
             <ResizablePanel
               className="overflow-y-auto"
-              defaultSize={25}
+              defaultSize={30}
               maxSize={40}
               minSize={20}
             >
               <SandboxFileExplorer />
             </ResizablePanel>
-            <ResizableHandle withHandle />
+
+            {/* Handle only visible on desktop */}
+            <div className="hidden md:block">
+              <ResizableHandle withHandle />
+            </div>
+
             <ResizablePanel className="overflow-y-auto">
               <SandboxCodeEditor />
             </ResizablePanel>
           </ResizablePanelGroup>
         </SandboxTabsContent>
+
+        {/* PREVIEW TAB */}
         <Suspense fallback={<div>Loading embed...</div>}>
           <SandboxTabsContent
             value="preview"
-            className="p-6 py-20 flex justify-center items-center bg-muted"
+            className="p-4 py-10 md:p-6 md:py-20 flex justify-center items-center bg-muted overflow-x-hidden"
           >
-            <Embed />
+            {/* <Embed /> */}
           </SandboxTabsContent>
         </Suspense>
       </SandboxTabs>
     </SandboxLayout>
   </SandboxProvider>
 );
+
 export default Example;

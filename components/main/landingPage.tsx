@@ -11,7 +11,7 @@ export default function LandingPage() {
   return (
     <>
       <BGGradient>
-        <div className="pt-10 px-4 md:px-8 max-w-4xl mx-auto">
+        <div className="pt-10">
           <h1 className="md:text-4xl text-2xl font-bold capitalize text-gray-900">
             WELCOME TO MEDIUM EMBED UI LIBRARY !
           </h1>

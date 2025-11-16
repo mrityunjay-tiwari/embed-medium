@@ -2,7 +2,7 @@ import React from "react";
 
 export function BGGradient({children}: {children: React.ReactNode}) {
   return (
-    <div className="px-16 bg-transparent relative ">
+    <div className="bg-transparent relative ">
       <div
         className="absolute inset-0 -z-10"
         style={{
