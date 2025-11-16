@@ -188,7 +188,7 @@ import Example from "./components/embeddings/mainembed";`,
 //         "/app/page.tsx",
 //         "/next.config.json",
 //       ],
-//       activeFile: "/app/page.tsx", 
+//       activeFile: "/app/page.tsx",
 //     }}
 //     files={files}
 //     className="overflow-auto"
@@ -297,9 +297,11 @@ const Example = () => (
         <Suspense fallback={<div>Loading embed...</div>}>
           <SandboxTabsContent
             value="preview"
-            className="p-4 py-10 md:p-6 md:py-20 items-center bg-muted overflow-auto w-full"
+            className="p-4 py-10 md:p-6 md:py-20 flex justify-center items-center bg-muted overflow-auto w-full"
           >
-            <Embed />
+            <div className="min-w-[700px]">
+              <Embed />
+            </div>
           </SandboxTabsContent>
         </Suspense>
       </SandboxTabs>
