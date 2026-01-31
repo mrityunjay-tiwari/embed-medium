@@ -6,6 +6,7 @@ import Example3 from "../embeddings/embed-style-3";
 import {BGGradient} from "./background";
 import Footer from "./footer";
 import Link from "next/link";
+import LinkPreview from "./link-preview";
 
 export default function LandingPage() {
   return (
@@ -82,6 +83,7 @@ export default function LandingPage() {
               <Example3 />
             </section>
           </div>
+          <LinkPreview />
           <Footer />
         </div>
       </BGGradient>

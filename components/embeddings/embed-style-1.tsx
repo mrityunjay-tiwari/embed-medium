@@ -300,7 +300,7 @@ const Example = () => (
             className="p-4 py-10 md:p-6 md:py-20 bg-muted overflow-auto w-full"
           >
             <div className="min-w-[700px] flex justify-center items-center">
-              <Embed />
+              {/* <Embed /> */}
             </div>
           </SandboxTabsContent>
         </Suspense>
